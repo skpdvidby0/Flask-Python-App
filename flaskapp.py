@@ -2,14 +2,16 @@
 import os
 import urlparse
 
-
+import sys, logging
+    logging.basicConfig(stream = sys.stderr)
 
 
 
 
 	
-from flaskext.mysql import MySQL
+
 from flask import Flask, render_template, json, request, session, redirect
+from flask.ext.mysql import MySQL
 app = Flask(__name__)
 app.secret_key = 'dhakkalagabukka'
 mysql = MySQL()
