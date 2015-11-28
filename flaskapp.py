@@ -3,7 +3,7 @@ import os
 import urlparse
 
 import sys, logging
-    logging.basicConfig(stream = sys.stderr)
+logging.basicConfig(stream = sys.stderr)
 
 
 
