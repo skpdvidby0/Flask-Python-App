@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rest and Move</title>
+
+   
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.11.2.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh2jOaKtKMCQbavlGHM813RHmofo7Be98"
+        async defer></script>
+    <!-- jquery cdn script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+    <script src="../static/js/index1.js"></script> 
+   <!--  <script src="../static/js/bookdriver.js"></script> -->
+    <link href="../static/css/index1.css" rel="stylesheet">
+   
+  </head>
+  <script type="text/javascript">
+     function setVisibility(id) {
+     if(document.getElementById('bt1').value=='Hide Layer'){
+     document.getElementById('bt1').value = 'Show Layer';
+     document.getElementById(id).style.display = 'none';
+     }else{
+     document.getElementById('bt1').value = 'Hide Layer';
+     document.getElementById(id).style.display = 'inline';
+     }
+     }
+ 
+  </script>>
+  <div id="map" ></div>
+  <body onload="init1();">
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/logout">Logout</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Rent and Move</h3>
+      </div>
+
+      <input type=button name=type id='bt1' value='Show Layer' onclick="setVisibility('map');";>  
+      <!--<button id="bt1" class="btn btn-lg btn-primary btn-block" type="button" onclick="setVisibility('map');">Show hide map</button> -->
+      <div class="btn-group" role="group" aria-label="...">
+          <button id="bt1" class="btn  btn-primary " type="button" onclick="setVisibility('map');">Show hide map<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></button>
+          <!-- <button type="button" class="btn btn-lg btn-success">Middle</button>
+          <button type="button" class="btn btn-lg btn-default">Right</button> -->
+          
+          <input id="showdriver" name="singlebutton" class="btn btn-primary" type="button" value="Showdrivers" />
+          <!-- <input id="bt3" name="singlebutton" class="btn btn-primary" type="button" value="Book Truck" onclick="window.location.href='error.html';"/> -->
+          <input id="bt3" name="singlebutton" class="btn btn-primary" type="button" value="Book Truck"/>
+      
+       </div>
+          
+
+      <footer class="footer">
+        <p>&copy; Company 2015</p>
+      </footer>
+
+    </div>
+  </body>
+</html>
+

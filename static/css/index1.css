@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*input[type=button]{
+    postion:absolute;
+    
+    left:10px; 
+*/
+#bt2 {
+  float: left;
+margin-top: 0;
+margin-left: 0;
+width: 80px;
+height: 25px;
+}
+#map {
+    width:43.3333%;
+    height:calc(100% - 80px);
+    position:absolute;
+    left:16px;
+    top:100px;
+    bottom:100px;
+    overflow:hidden;
+    margin-top: 2cm;
+}
+}

@@ -1,0 +1,22 @@
+create table USER(user_id bigint NOT NULL AUTO_INCREMENT, 
+    first_name varchar(45) NULL,
+    last_name varchar(45) NULL,
+    user_username varchar(90) NULL,
+    user_address varchar(90) NULL,
+    user_phoneno bigint(20) NULL,
+    user_password varchar(90) NULL,
+     PRIMARY KEY (user_id)); 
+
+insert into USER (first_name ,
+    last_name ,
+    user_username ,
+    user_address ,
+    user_phoneno ,
+    user_password) values('dave','xerga','vlym','3021','5425432123','dhiklu');
+
+127.4.234.130 
+3306  
+adminQVA9Iqw 
+mKilLsPmv65f 
+mysql://adminQVA9Iqw:mKilLsPmv65f@127.4.234.130:3306/
+

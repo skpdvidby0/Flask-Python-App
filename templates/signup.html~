@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Python Flask Bucket List App</title>
+
+   
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.11.2.js"></script>
+    <script src="../static/js/signUp.js"></script>
+   
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="index.html">Home</a></li>
+            <li role="presentation"><a href="#">Sign In</a></li>
+            <li role="presentation" class="active"><a href="#">Sign Up</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Rent&Move</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Rent a Truck</h1>
+        <form class="form-signin">
+        <!--fname--> 
+        <label for="inputfirstName" class="sr-only">First Name</label>
+        <input type="name" name="inputfName" id="fName" class="form-control" placeholder="First Name" required autofocus>
+        <!--lname-->
+        <label for="inputlastName" class="sr-only">Last Name</label>
+        <input type="name" name="inputlName" id="lName" class="form-control" placeholder="Last Name" required autofocus>   
+         <!--uname-->
+        <label for="inputuserName" class="sr-only">Username</label>
+        <input type="name" name="inputuName" id="uName" class="form-control" placeholder="Usernaame" required autofocus>
+        <!--address-->
+        <label for="inputaddress" class="sr-only">Address</label>
+        <input type="name" name="inputuaddress" id="uAddress" class="form-control" placeholder="Address" required autofocus>
+         <!--phoneno-->    
+        <label for="inputphones" class="sr-only">Phone Number</label>
+        <input type="name" name="inputlName" id="lName" class="form-control" placeholder="Phone Number" required autofocus> 
+
+  
+        <!--email-->
+        <label for="email" class="sr-only">Email Id</label>
+        <input type="email" name="inputEmail" id="uEmail" class="form-control" placeholder="Email address" required autofocus>
+
+        <!--password-->
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="inputPassword" id="uPassword" class="form-control" placeholder="Password" required>
+        
+        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button>
+      </form>
+      </div>
+
+      
+
+      <footer class="footer">
+        <p>&copy; Company 2015</p>
+      </footer>
+
+    </div>
+  </body>
+</html>
+
