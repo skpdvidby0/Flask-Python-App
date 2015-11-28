@@ -22,14 +22,14 @@ host= url.hostname,
 port = url.port
         
 
-app.config['MYSQL_DATABASE_PORT'] = port
+app.config['MYSQL_DATABASE_PORT'] = '3306'
 #host1=os.getenv('OPENSHIFT_MYSQL_DB_HOST')
-app.config['MYSQL_DATABASE_USER'] = user
-app.config['MYSQL_DATABASE_PASSWORD'] = pass1
+app.config['MYSQL_DATABASE_USER'] = 'admin7YSeANi'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'ShMwe1xM2sV4'
 app.config['MYSQL_DATABASE_DB'] = 'projectdb_schema'
 
 #app.config['MYSQL_DATABASE_HOST'] = 'ex-std-node455.prod.rhcloud.com'
-app.config['MYSQL_DATABASE_HOST'] = host
+app.config['MYSQL_DATABASE_HOST'] = '127.12.232.130'
 
 
 mysql.init_app(app)
