@@ -8,7 +8,7 @@ import urlparse
 
 
 	
-from flask.ext.mysqldb import MySQL
+from flaskext.mysql import MySQL
 from flask import Flask, render_template, json, request, session, redirect
 app = Flask(__name__)
 app.secret_key = 'dhakkalagabukka'
