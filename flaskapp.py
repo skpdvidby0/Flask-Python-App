@@ -14,9 +14,12 @@ app.secret_key = 'dhakkalagabukka'
 mysql = MySQL()
 #host1=os.getenv('OPENSHIFT_MYSQL_DB_HOST')
 app.config['MYSQL_DATABASE_USER'] = 'admin7YSeANi'
-app.config['MYSQL_DATABASE_PASSWORD'] = ' ShMwe1xM2sV4'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'ShMwe1xM2sV4'
 app.config['MYSQL_DATABASE_DB'] = 'projectdb_schema'
-app.config['MYSQL_DATABASE_HOST'] = ' ex-std-node455.prod.rhcloud.com'
+app.config['MYSQL_DATABASE_HOST'] = 'ex-std-node455.prod.rhcloud.com'
+
+
+
 mysql.init_app(app)
 @app.route('/')
 def main():
