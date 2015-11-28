@@ -24,7 +24,7 @@ host= url.hostname,
 port = url.port
         
 
-app.config['MYSQL_DATABASE_PORT'] = '3306'
+app.config['MYSQL_DATABASE_PORT'] = 3306
 #host1=os.getenv('OPENSHIFT_MYSQL_DB_HOST')
 app.config['MYSQL_DATABASE_USER'] = 'admin7YSeANi'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'ShMwe1xM2sV4'
