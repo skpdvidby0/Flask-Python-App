@@ -8,13 +8,7 @@ html, body {
     
     left:10px; 
 */
-#bt2 {
-  float: left;
-margin-top: 0;
-margin-left: 0;
-width: 80px;
-height: 25px;
-}
+
 #map {
     width:43.3333%;
     height:calc(100% - 80px);
@@ -24,5 +18,111 @@ height: 25px;
     bottom:100px;
     overflow:hidden;
     margin-top: 2cm;
+
 }
+#map1 {
+    width:43.3333%;
+    height:calc(100% - 80px);
+    position:absolute;
+    left:16px;
+    top:100px;
+    bottom:100px;
+    overflow:hidden;
+    margin-top: 3cm;
+    
 }
+
+#r1{
+    position: relative;
+    left:500px;
+    top:80px;
+    width:600px; height:300px;
+    word-wrap: break-word;
+    overflow:auto;
+    diplay:none;!important
+
+}
+#r2{
+width:500px; height:50px;    
+overflow:visible;
+word-wrap: break-word;
+display:hidden;
+}
+#r3{
+position: relative;    
+ 
+width:500px; height:50px;    
+overflow:visible;
+word-wrap: break-word;
+display:hidden;
+}
+
+
+#bk1{
+    position: relative;
+    left:500px;
+    top:80px;
+    width:600px; height:300px;
+    word-wrap: break-word;
+    overflow:auto;
+    display:none;
+    
+
+}
+
+#tab1{
+    margin-left: 410px;
+    left:500px;
+    right:100px;
+    top:80px;
+    width:600px; height:400px;
+    word-wrap: break-word;
+    overflow:auto;
+    margin-top: 50px;
+    
+    
+
+}
+
+#tab2{
+    margin-left: 410px;
+    left:500px;
+    right:100px;
+    top:0px;
+    width:600px; height:300px;
+    word-wrap: break-word;
+    overflow:auto;
+    display:none;
+    float: left;
+}
+#tab3{
+    margin-left:410px;
+    left:500px;
+    right:100px;
+    top:0px;
+    width:600px; height:300px;
+    word-wrap: break-word;
+    overflow:auto;
+    display:none;
+    
+}
+
+#route1{
+    width:43.3333%;
+    height:calc(100% - 80px);
+    position:absolute;
+    left:1600px;
+    top:1000px;
+    bottom:100px;
+    overflow:hidden;
+    margin-top: 2cm;
+    float : left;
+
+}
+#front_footer{
+    margin-top: 380px !important;
+}
+
+
+
+

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Rest and Move</title>
+    <title>Rent and Move</title>
 
    
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,7 +15,7 @@
     <!-- jquery cdn script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
-    <script src="../static/js/index1.js"></script> 
+    <script src="../static/js/index2.js"></script> 
     
     <link href="../static/css/index1.css" rel="stylesheet">
    
@@ -34,7 +34,7 @@
   </script>
 
   <div id="map" ></div>
-  <body onload="init1();">
+  <body onload="init4();">
 
     <div class="container">
       <div class="header">
@@ -44,32 +44,44 @@
           </ul>
         </nav>
         <h3 class="text-muted">Rent and Move</h3>
+
       </div>
       
       <input type=button name=type id='bt1' value='Show Layer' onclick="setVisibility('map');";>  
       <!--<button id="bt1" class="btn btn-lg btn-primary btn-block" type="button" onclick="setVisibility('map');">Show hide map</button> -->
       <div class="btn-group" role="group" aria-label="..." action="/bookdriver" method="post">
-          <button id="bt1" class="btn  btn-primary " type="button" onclick="setVisibility('map');">Show hide map<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></button>
+          <button id="bt1" class="btn  btn-primary " type="button" onclick="setVisibility('map');">Show hide map</button>
           <!-- <button type="button" class="btn btn-lg btn-success">Middle</button>
           <button type="button" class="btn btn-lg btn-default">Right</button> -->
           
-          <input id="showdriver" name="singlebutton" class="btn btn-primary" type="button" value="Showdrivers" />
+          <input id="bt19" name="singlebutton" class="btn btn-primary" type="button" value="Show Booking" />
           <!-- <input id="bt3" name="singlebutton" class="btn btn-primary" type="button" value="Book Truck" onclick="window.location.href='error.html';"/> -->
-          <input id="bt2" name="showaddress" class="btn btn-primary" type="button" value="Use Current address" onclick="init2();" />
-          <input id="bt3" name="bookdriver" class="btn btn-primary" type="button" value="Book Truck" />
+          <input id="bt2" name="showaddress" class="btn btn-primary" type="button" value="Show Current address" onclick="init5();" />
+          
           
       
        </div>
-       <div id ="r1">
-        <form class="form-signin" action="/bookdriver" method="post">
+       <div id ="tab1" style="display:none;">
+        
         <!-- <a href="/bookdriver" class="btn btn-primary">Book Truck</a> -->
-        <button id="bt5" class="btn btn-lg btn-primary btn-block" type="submit">Book Truck</button>
-        <input id="bt4" name="bookdriver" class="btn btn-primary" type="button" value="Book Truck" />
-        Source Address<br>
-        <input type="name" name="source" id="r2"  placeholder="Source Address" required autofocus><br>
-        Destination Address<br>
-        <input type="name" name="destination" id="r3"  placeholder="Destination Address" required autofocus>
-        </form>
+        
+        
+              
+          <table class="table table-striped">
+            <thead>
+              <tr>
+               
+               <th>Your Address is </th>
+               
+               
+        
+              </tr>
+            </thead>
+            <tbody><tr><th id ="r2"></th></tr></tbody>
+          </table>  
+          <div id="r45" style="display: none;"><input type="name" name="source3" id="rk3"  value="{{user1}}" required autofocus><br></div>
+        
+        
         </div>
        <!-- <div  id="r1">
           <div  >
@@ -79,7 +91,7 @@
         </div>
         <div id="r3"></div>
         <div id="addisplay">  </div>  
- -->
+ -->   
       
 
     </div>

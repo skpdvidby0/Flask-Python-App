@@ -20,16 +20,17 @@
         <nav>
           <ul class="nav nav-pills pull-right">
             <li role="presentation" ><a href="/">Home</a></li>
-            <li role="presentation" ><a href="/showSignin">Sign In</a></li>
-            <li role="presentation" class="active" ><a href="/showSignUp">Sign Up</a></li>
+            <li role="presentation" ><a href="/driverSignin">Sign In</a></li>
+            <li role="presentation" class="active" ><a href="/driverSignUp">Sign Up</a></li>
+            
           </ul>
         </nav>
         <h3 class="text-muted">Rent and move</h3>
       </div>
  
       <div class="jumbotron">
-        <h1>SignUp</h1>
-        <form class="form-signin" action="/signUp" method="post">
+        <h1>Driver SignUp</h1>
+        <form class="form-signin" action="/dsignup" method="post">
         <label for="fname" class="sr-only">First Name</label>
         <input type="name" name="inputfName" id="fName" class="form-control" placeholder="First Name" required autofocus>
         <label for="lName" class="sr-only">Last Name</label>
@@ -42,10 +43,16 @@
         <input type="name" name="inputphone" id="uphone" class="form-control" placeholder="Phone Number" required autofocus>
         <label for="uEmail" class="sr-only">Email Id</label>
         <input type="email" name="inputEmail" id="uEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="utruck" class="sr-only">Truck Make</label>
+        <input type="name" name="uTruck" id="uTruck" class="form-control" placeholder="Truck make" required autofocus>
+        <label for="utruck" class="sr-only">Driver Licence No</label>
+        <input type="name" name="ulicence" id="ulicence" class="form-control" placeholder="Driver Licence No" required autofocus>
+        <label for="utruck" class="sr-only">Registration Plate</label>
+        <input type="name" name="uPlate" id="uPlate" class="form-control" placeholder="Registration Plate" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
          
-        <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+        <button id="btnSignUp1" class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
       </form>
       </div>
  

@@ -1,16 +1,18 @@
+var image = '../static/js/truckoff.png';
 var pos;
 var cos;
 var map;
-var image = '../static/js/truckoff.png';
-//var markers;
-function init1() {
+var lat1;
+var lat2;
+function init4() {
 
     map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 40.731, lng: -73.997},
     zoom: 12
   });
 }
- function init2(){   
+
+function init5(){   
   
   if (navigator.geolocation) {
      var infoWindow = new google.maps.InfoWindow({map: map}); 
@@ -19,8 +21,7 @@ function init1() {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-      alert(pos);
-      //alert(position.coords.longitude);
+      
       //var latlng = {lat: parseFloat(latlngStr[0]), lng: parseFloat(latlngStr[1])};
       infoWindow.setPosition(pos);
       map = new google.maps.Map(document.getElementById('map'), {
@@ -35,7 +36,7 @@ function init1() {
                 icon : image,
                   });
       map.setCenter(pos);
-      document.getElementById('r3').innerHTML=pos;
+      //document.getElementById('r3').innerHTML=pos;
       var geocoder = new google.maps.Geocoder;
       var infowindow1 = new google.maps.InfoWindow;
       //alert('2')
@@ -66,8 +67,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: Your browser doesn\'t support geolocation.');
 }
 //convert latlong to address
-
-
 function geocodeLatLng(geocoder, map, infowindow1) {
   
     
@@ -75,14 +74,15 @@ function geocodeLatLng(geocoder, map, infowindow1) {
      /*document.getElementById('r1').style.display = 'inline';
      document.getElementById('r1').style.width = '300px';
      document.getElementById('r1').style.height = '100px'*/
-       
+      
     geocoder.geocode({'location':pos}, function(results, status) {
       
     if (status === google.maps.GeocoderStatus.OK) {
       if (results[1]) {
         alert(results[1].formatted_address+'addressis');
         //document.getElementById('r2').innerHTML=results[1].formatted_address;
-          document.getElementById('r2').value=results[1].formatted_address; 
+          document.getElementById('r2').innerHTML=results[1].formatted_address;
+          document.getElementById('tab2').style.display = 'block';
           
             cos=results[1].formatted_address;
             alert(cos);
@@ -101,18 +101,20 @@ function geocodeLatLng(geocoder, map, infowindow1) {
       window.alert('Geocoder failed due to: ' + status);
     }
   });
-}
 
-//render booking page
-$(function(){
-  $('#bt5').click(function(){
-    
+   
+
+  $(function(){
+    $('#bt19').click(function(){
     $.ajax({
-      url: '/bookdriver',
-      data: $('form').serialize(),
-      type: 'POST',
+      url: '/bookloc',
+      
+      type: 'GET',
       success: function(response){
         console.log(response);
+        var obj = JSON.parse(response);
+        var user1=document.getElementById('rk3').value;
+        
       },
       error: function(error){
         console.log(error);
@@ -121,50 +123,25 @@ $(function(){
   });
 });
 
-//show drivers around
-$(function() {
-    $('#showdriver').click(function() {
- 
-        $.ajax({
-            url: '/driverdisplay',
-            type: 'GET',
-            success: function(res) {
-                //alert("ok",res,"notok");
-                var obj = JSON.parse(res);
-                //alert(obj.display);
-                //console.log(obj);
-                alert(obj);
-                // conosle.log("ok",obj.display);
-                console.log(res);
-                 // var map = new google.maps.Map(document.getElementById('map'), {
-                 //   zoom : 8,
-                 //   center :pos 
-                 // });
-                map.setCenter(pos);
-                for (var k = 0; k < obj.length; k++) {
-                alert(obj[k][1]);
-                var markers = new google.maps.Marker({
-                position : new google.maps.LatLng(obj[k][1], obj[k][2]),
-                map : map,
-                icon : image                 });
-    
-                }
-                     
-                //alert("notok");
-                //for each (var row in obj){alert(row); }
 
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        });
-    });
-});
 
-function a1(){
-  alert(cos+'1stjs');
-  return cos;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
-
-
-

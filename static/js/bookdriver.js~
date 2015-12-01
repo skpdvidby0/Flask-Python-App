@@ -1,0 +1,8 @@
+var value = require('index1.js').yourvar;
+alert(value);
+function init2() {
+
+    map = new google.maps.Map(document.getElementById('map'), {
+    center: value,
+    zoom: 12
+  });
