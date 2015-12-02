@@ -29,8 +29,8 @@ function init1() {
        
       var marker1 = new google.maps.Marker({
                 position : new google.maps.LatLng(pos),
-                map : map,
-                icon : image,
+                map : map
+                
                   });
       map.setCenter(pos);
       document.getElementById('r3').innerHTML=pos;
