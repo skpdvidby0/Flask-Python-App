@@ -1,4 +1,4 @@
-
+//alert("call1");
 var image1 = '../static/js/truckoff.png';
 var image2 = '../static/js/truckon.png';
 var map;
@@ -19,7 +19,7 @@ var udist2;
 var udist3;
 function geocodeAddress(geocoder, resultsMap) {
   var address = document.getElementById('bk3').value;
-  
+  alert(address);
   geocoder.geocode({'address': address}, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       resultsMap.setCenter(results[0].geometry.location);
@@ -71,13 +71,20 @@ $(document).ready(function() {
             url: '/driverdisplay',
             type: 'GET',
             success: function(res) {
-                
+                //alert("ok",res,"notok");
                 var obj = JSON.parse(res);
+                //alert(obj.display);
+                //console.log(obj);
                 
+                //document.getElementById('bk5').value=obj[0][3];
                 console.log(obj);
-                
+                // conosle.log("ok",obj.display);
                 console.log(res);
-                 
+                 // var map = new google.maps.Map(document.getElementById('map'), {
+                 //   zoom : 8,
+                 //   center :pos 
+                 // });
+                //map.setCenter(pos);
 
                 for (var k = 0; k < obj.length; k++) {
 
@@ -85,18 +92,18 @@ $(document).ready(function() {
                 position : new google.maps.LatLng(obj[k][1], obj[k][2]),
                 map : map,
                 icon : image1                 });
-                
+                //alert(obj[k][1]);
                 obj9[k]=obj[k][1];
                 obj10[k]=obj[k][2];
                 var position1 = new google.maps.LatLng(obj[k][1], obj[k][2]);
                 var position2 = document.getElementById('bk3').value;
-                
-                obj3 = calcdist(position1,position2,k,obj[k][0],obj[k][3],obj[k][4]);
-                
+                map.setcenter(position1);
+                obj3 = calcdist(position1,position2,k,obj[k][3],obj[k][4],obj[k][5]);
+                //alert(dist+'dist');
                 }
                      
-                
-                
+                //alert("notok");
+                //for each (var row in obj){alert(row); }
 
             },
             error: function(error) {
@@ -159,12 +166,12 @@ function getdriver(){
   for(var t=0;t<obj4.length;t++){
    obj11[t]=obj4[t];
    obj4[t] = obj4[t].replace(/[^0-9\\.]+/ig,'');
-
+//alert(obj4[t]);
   }
 
-
-
-
+//alert(obj3+'third');
+//alert(obj4+'fourth'+obj5+obj6);
+alert(obj7);
 
 var index = 0;
 var value = obj4[0];
@@ -181,9 +188,9 @@ document.getElementById('id1').innerHTML=obj6[gindex];
 document.getElementById('name1').innerHTML=obj7[gindex];
 document.getElementById('eta').innerHTML=obj11[gindex];
 document.getElementById('dist1').innerHTML=obj5[gindex];
-
+//var ex1= document.getElementById('eta').innerHTML;
 console.log(obj9[gindex]+obj10[gindex]);
-
+//alert(obj9[gindex]+obj10[gindex]+'lat');
 var markers = new google.maps.Marker({
                 position : new google.maps.LatLng(obj9[gindex], obj10[gindex]),
                 map : map,
@@ -191,7 +198,7 @@ var markers = new google.maps.Marker({
     
                 
 
-
+alert(value+'key'+index+obj7[index]);
 
           var source12 =document.getElementById('bk3').value;
           var dest12= document.getElementById('bk4').value;
@@ -230,7 +237,7 @@ if(htmlstring == ''){
       type: 'POST',
       success: function(response){
         console.log(response);
-        alert("Booking Successful");
+        alert('Booking Successful')
       },
       error: function(error){
         console.log(error);

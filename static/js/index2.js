@@ -4,6 +4,14 @@ var cos;
 var map;
 var lat1;
 var lat2;
+var h1=0;
+var h2;
+var h3=0;
+var h4;
+var h5;
+var h6;
+var h7;
+var h8;
 function init4() {
 
     map = new google.maps.Map(document.getElementById('map'), {
@@ -13,7 +21,7 @@ function init4() {
 }
 
 function init5(){   
-  
+   document.getElementById('bt19').style.display = 'block';
   if (navigator.geolocation) {
      var infoWindow = new google.maps.InfoWindow({map: map}); 
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -39,9 +47,9 @@ function init5(){
       //document.getElementById('r3').innerHTML=pos;
       var geocoder = new google.maps.Geocoder;
       var infowindow1 = new google.maps.InfoWindow;
-      //alert('2')
+      
       geocodeLatLng(geocoder,map,infowindow1);
-      //alert('5');
+      
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
     });
@@ -79,21 +87,13 @@ function geocodeLatLng(geocoder, map, infowindow1) {
       
     if (status === google.maps.GeocoderStatus.OK) {
       if (results[1]) {
-        alert(results[1].formatted_address+'addressis');
-        //document.getElementById('r2').innerHTML=results[1].formatted_address;
+        
+          h3=results[1].formatted_address;
           document.getElementById('r2').innerHTML=results[1].formatted_address;
-          document.getElementById('tab2').style.display = 'block';
+          document.getElementById('tab6').style.display = 'block';
           
             cos=results[1].formatted_address;
-            alert(cos);
-        /*map.setZoom(11);
-        var marker = new google.maps.Marker({
-          position: latlng,
-          map: map
-        });
-        infowindow1.setContent(results[1].formatted_address);
-        infowindow1.open(map, marker);*/
-        //alert(results[1]);
+            
       } else {
         window.alert('No results found');
       }
@@ -114,7 +114,28 @@ function geocodeLatLng(geocoder, map, infowindow1) {
         console.log(response);
         var obj = JSON.parse(response);
         var user1=document.getElementById('rk3').value;
+        //alert(user1);
+        //alert(obj[4][5]);
+        for (var k = 0; k < obj.length; k++) {
+            if(obj[k][5]==user1){
+               h1=obj[k][2];
+               h2=obj[k][3];
+            }
+
+        }
         
+        
+        
+        if(h1==0)
+        {
+          alert("No booking under your name");
+        }
+        else{
+        document.getElementById('ir1').innerHTML=h1;
+        document.getElementById('ir2').innerHTML=h2;
+        document.getElementById('tab5').style.display = 'block';
+        }
+      
       },
       error: function(error){
         console.log(error);

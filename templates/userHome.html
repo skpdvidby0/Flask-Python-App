@@ -46,25 +46,25 @@
         <h3 class="text-muted">Rent and Move</h3>
       </div>
       
-      <input type=button name=type id='bt1' value='Show Layer' onclick="setVisibility('map');";>  
+      <input type=button name=type id='bt1' value='Hide Layer' style="display:none;" onclick="setVisibility('map');";>  
       <!--<button id="bt1" class="btn btn-lg btn-primary btn-block" type="button" onclick="setVisibility('map');">Show hide map</button> -->
       <div class="btn-group" role="group" aria-label="..." action="/bookdriver" method="post">
-          <button id="bt1" class="btn  btn-primary " type="button" onclick="setVisibility('map');">Show hide map<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></button>
+          <button id="bt1" class="btn  btn-primary " type="button" onclick="setVisibility('map');">Show hide map</button>
           <!-- <button type="button" class="btn btn-lg btn-success">Middle</button>
           <button type="button" class="btn btn-lg btn-default">Right</button> -->
           
-          <input id="showdriver" name="singlebutton" class="btn btn-primary" type="button" value="Showdrivers" />
+          <input id="showdriver" name="singlebutton" class="btn btn-info" type="button" value="Showdrivers" />
           <!-- <input id="bt3" name="singlebutton" class="btn btn-primary" type="button" value="Book Truck" onclick="window.location.href='error.html';"/> -->
-          <input id="bt2" name="showaddress" class="btn btn-primary" type="button" value="Use Current address" onclick="init2();" />
-          <input id="bt3" name="bookdriver" class="btn btn-primary" type="button" value="Book Truck" />
+          <input id="bt2" name="showaddress" class="btn btn-warning" type="button" value="Use Current address" onclick="init2();" />
+          
           
       
        </div>
        <div id ="r1">
         <form class="form-signin" action="/bookdriver" method="post">
         <!-- <a href="/bookdriver" class="btn btn-primary">Book Truck</a> -->
-        <button id="bt5" class="btn btn-lg btn-primary btn-block" type="submit">Book Truck</button>
-        <input id="bt4" name="bookdriver" class="btn btn-primary" type="button" value="Book Truck" />
+        <button id="bt5" class="btn btn-success " type="submit">Book Truck</button><br>
+        
         Source Address<br>
         <input type="name" name="source" id="r2"  placeholder="Source Address" required autofocus><br>
         Destination Address<br>
@@ -80,6 +80,9 @@
         <div id="r3"></div>
         <div id="addisplay">  </div>  
  -->
+      <footer class="footer" id="front_footer">
+        <p>&copy; Rent and Move Inc 2015</p>
+      </footer>
       
 
     </div>

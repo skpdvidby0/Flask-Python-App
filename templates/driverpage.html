@@ -47,21 +47,21 @@
 
       </div>
       
-      <input type=button name=type id='bt1' value='Show Layer' onclick="setVisibility('map');";>  
+      <input type=button name=type id='bt1' value='Show Layer' onclick="setVisibility('map');" style="display:none;">  
       <!--<button id="bt1" class="btn btn-lg btn-primary btn-block" type="button" onclick="setVisibility('map');">Show hide map</button> -->
       <div class="btn-group" role="group" aria-label="..." action="/bookdriver" method="post">
-          <button id="bt1" class="btn  btn-primary " type="button" onclick="setVisibility('map');">Show hide map</button>
+          <button id="bt1" class="btn  btn-primary " type="button" onclick="setVisibility('map');">Show/Hide map</button>
           <!-- <button type="button" class="btn btn-lg btn-success">Middle</button>
           <button type="button" class="btn btn-lg btn-default">Right</button> -->
           
-          <input id="bt19" name="singlebutton" class="btn btn-primary" type="button" value="Show Booking" />
+          
           <!-- <input id="bt3" name="singlebutton" class="btn btn-primary" type="button" value="Book Truck" onclick="window.location.href='error.html';"/> -->
-          <input id="bt2" name="showaddress" class="btn btn-primary" type="button" value="Show Current address" onclick="init5();" />
+          <input id="bt2" name="showaddress" class="btn btn-success" type="button" value="Show Current address" onclick="init5();" />
           
-          
+          <input id="bt19" name="singlebutton" class="btn btn-primary" type="button" value="Show Booking" style="display:none;"/>
       
        </div>
-       <div id ="tab1" style="display:none;">
+       <div id ="tab6" style="display:none;">
         
         <!-- <a href="/bookdriver" class="btn btn-primary">Book Truck</a> -->
         
@@ -71,18 +71,43 @@
             <thead>
               <tr>
                
-               <th>Your Address is </th>
+               <th><h2>Your Address is </h2></th>
                
                
         
               </tr>
             </thead>
             <tbody><tr><th id ="r2"></th></tr></tbody>
-          </table>  
+          </table>
+          <div id="tab5" >
+          
+         <h2>Booking Details</h2>
+              
+          <table class="table table-striped">
+            <thead>
+              <tr>
+               <th>Booking ID</th>
+               <th>Address</th>
+               
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+               <td id="ir1"></td>
+               <td id="ir2"></td>
+               
+        
+              </tr>
+             </tbody>
+          </table>
+      </div>  
           <div id="r45" style="display: none;"><input type="name" name="source3" id="rk3"  value="{{user1}}" required autofocus><br></div>
         
         
         </div>
+
+
+        
        <!-- <div  id="r1">
           <div  >
            Address is
@@ -93,7 +118,9 @@
         <div id="addisplay">  </div>  
  -->   
       
-
+    <footer class="footer" id="front_footer1">
+        <p>&copy; Rent and Move Inc 2015</p>
+      </footer>
     </div>
   </body>
 </html>
